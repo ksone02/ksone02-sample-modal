@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import "./styles.css";
 
-const MyModal = ({ trigger, children }) => {
+const MyModal = ({
+  trigger,
+  children,
+}: PropsWithChildren<{ trigger: any }>) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
